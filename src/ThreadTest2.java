@@ -46,7 +46,7 @@ public class ThreadTest2 {
             this.max = max;
         }
         public void run() {
-            count = countPrimes(min,max);
+            count = countPrimes(min, max);
             System.out.println("There are " + count + 
                     " primes between " + min + " and " + max);
             addToTotal(count);
