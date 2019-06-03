@@ -41,6 +41,7 @@ public class ThreadTest2 {
     private static class CountPrimesThread extends Thread {
         int count = 0;
         int min, max;
+        
         public CountPrimesThread(int min, int max) {
             this.min = min;
             this.max = max;
