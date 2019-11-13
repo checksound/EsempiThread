@@ -1,3 +1,5 @@
+package io.checksound.concurrency;
+
 public class Deadlock {
 	
     static class Friend {

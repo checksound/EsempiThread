@@ -1,3 +1,5 @@
+package io.checksound.concurrency.net;
+
 import java.net.*;
 import java.io.*;
 import java.util.Date;
@@ -49,9 +51,11 @@ public class DateServerWithThreads {
      */
     private static class ConnectionHandler extends Thread {
         Socket client;
+        
         ConnectionHandler(Socket socket) {
             client = socket;
         }
+        
         public void run() {
             String clientAddress = client.getInetAddress().toString();
             try {

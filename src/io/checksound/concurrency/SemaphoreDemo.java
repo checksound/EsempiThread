@@ -1,3 +1,5 @@
+package io.checksound.concurrency;
+
 // java program to demonstrate 
 // use of semaphores Locks 
 import java.util.concurrent.*; 

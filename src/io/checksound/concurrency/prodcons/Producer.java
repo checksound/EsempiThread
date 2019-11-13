@@ -1,4 +1,4 @@
-package producer_consumer;
+package io.checksound.concurrency.prodcons;
 
 import java.util.Random;
 

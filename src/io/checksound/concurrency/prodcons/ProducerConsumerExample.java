@@ -1,4 +1,4 @@
-package producer_consumer;
+package io.checksound.concurrency.prodcons;
 
 public class ProducerConsumerExample {
     public static void main(String[] args) {

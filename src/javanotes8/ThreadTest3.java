@@ -1,3 +1,5 @@
+package javanotes8;
+
 import textio.TextIO;
 
 import java.util.concurrent.atomic.AtomicInteger;
@@ -40,10 +42,12 @@ public class ThreadTest3 {
     private static class CountPrimesThread extends Thread {
         int count = 0;
         int min, max;
+        
         public CountPrimesThread(int min, int max) {
             this.min = min;
             this.max = max;
         }
+        
         public void run() {
             count = countPrimes(min,max);
             System.out.println("There are " + count + 

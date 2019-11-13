@@ -1,3 +1,5 @@
+package javanotes8;
+
 import textio.TextIO;
 
 /**
@@ -63,13 +65,18 @@ public class ThreadTest2 {
         int increment = START/numberOfThreads;
         System.out.println("\nCounting primes between " + (START + 1) + " and " 
                 + (2*START) + " using " + numberOfThreads + " threads...\n");
+        
         long startTime = System.currentTimeMillis();
+        
         CountPrimesThread[] worker = new CountPrimesThread[numberOfThreads];
         for (int i = 0; i < numberOfThreads; i++)
             worker[i] = new CountPrimesThread( START + i*increment + 1, START + (i+1) * increment );
+        
         total = 0;
+        
         for (int i = 0; i < numberOfThreads; i++)
             worker[i].start();
+        
         for (int i = 0; i < numberOfThreads; i++) {
             while (worker[i].isAlive()) {
                 try {
