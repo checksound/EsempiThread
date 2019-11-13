@@ -20,9 +20,11 @@ public class ThreadTest1 {
      */
     private static class CountPrimesThread extends Thread {
         int id;  // An id number for this thread; specified in the constructor.
+        
         public CountPrimesThread(int id) {
             this.id = id;
         }
+        
         public void run() {
             long startTime = System.currentTimeMillis();
             int count = countPrimes(2, MAX);
@@ -47,10 +49,13 @@ public class ThreadTest1 {
         }
         System.out.println("\nCreating " + numberOfThreads + " prime-counting threads...");
         CountPrimesThread[] worker = new CountPrimesThread[numberOfThreads];
+        
         for (int i = 0; i < numberOfThreads; i++)
             worker[i] = new CountPrimesThread( i );
+        
         for (int i = 0; i < numberOfThreads; i++)
             worker[i].start();
+        
         System.out.println("Threads have been created and started.");
     }
 

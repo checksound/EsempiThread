@@ -12,7 +12,7 @@ Codice esempio calcolo numeri primi:
 
 Vesrsione 1 - creazione di thead: [javanotes8.ThreadTest1](./src/javanotes8/ThreadTest1.java)
 
-Versione 2 - coordinamento tramite join e utilizzo di syncronized: [javanotes8.ThreadTest2](./src/javanotes8/ThreadTest2.java)
+Versione 2 - coordinamento tramite **join** e utilizzo di **synchronized**: [javanotes8.ThreadTest2](./src/javanotes8/ThreadTest2.java)
 
 Versione 3 - utilizzo di variabili atomiche: [javanotes8.ThreadTest3](./src/javanotes8/ThreadTest3.java)
 
