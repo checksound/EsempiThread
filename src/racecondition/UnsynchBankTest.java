@@ -1,4 +1,4 @@
-package unsynch;
+package racecondition;
 
 /**
  * This program shows data corruption when multiple threads access a data structure.
