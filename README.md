@@ -30,6 +30,14 @@ Esempio di deadlock [io.checksound.concurrency.Deadlock](./src/io/checksound/con
 
 ed esempio di utilizzo della classe `java.util.concurrent.locks.Lock` con l'utilizzo del lock esplicito per risolvere le problematiche del deadlock: [io.checksound.concurrency.Safelock](./src/io/checksound/concurrency/Safelock.java)
 
+## ESEMPIO BANCA
+
+Nel package [racecondition](./src/racecondition) c'è la versione non sincronizzata in cui si vede che si verifica la race condition.
+
+Nel package [synch](./src/synch) c'è la versione che utilizza 
+`java.util.concurrent.locks.Lock` e `java.util.concurrent.locks.Condition`.
+
+Nel package [synch2](./src/synch2) c'è la versione che utilizza `synchronized`, `wait` e `notify`.
 
 ## ESEMPI JAVAXF
 
