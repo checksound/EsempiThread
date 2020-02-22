@@ -73,11 +73,34 @@ for each pixel (Px, Py) on the screen do
 
 Esempio [javanotes8.BackgroundComputationDemo](javanotes8.BackgroundComputationDemo) per visualizzazione con unico thread in background.
 
-[javanotes8.MultiprocessingDemo1](javanotes8.MultiprocessingDemo1) utilizza più thread, potendo selezionare il numero da 1 a 8, suddividendo le righe da disegnare in zone, una per ogni thread.
+[javanotes8.MultiprocessingDemo1](javanotes8.MultiprocessingDemo1) utilizza più thread, potendo selezionare il numero da 1 a 8. Il programma divide il compito 
+(task) di disegnare un'immagine in tanti sotto task e assegna ogni sottotask a 
+un thred.
 
 ![](./MultiprocessingDemo.PNG)
 
 ![](./MultiprocessingDemo2.PNG)
+
+Anche se questo funziona, c'è qualche problema: Alcuni subtask potrebbero metterci di più degli altri a completare. L'immagine viene divisa in parti uguali, ma alcune parti dell'immagine richiedono più calcoli che altre. Infatti se si fa partire la visualizzazione con tre thread, si vede che l'immagine in mezzo ci mette un po' di più a essere calcolata che quelle sopra
+e sotto. In generale dividendo un problema in sottoproblemi, è molto difficile 
+predirre quanto tempo ci vorrà per finire ogni sottoproblema. Se ad esempio
+un sottoproblema ci mette molto di più degli altri a finire. Il thread che
+calcola quel sottoproblema continuerà la sua esecuzione per un tempo relativamente lungo dopo che tutti gli altri thread hanno finito. Durante 
+quel tempo solo **uno** dei processori del computer starà lavorando; gli altri
+processori saranno a riposo.
+
+Come semplice esempio, sopponimo da avere un computer con due processori. Dividiamo il problema in due sottoproblemi e creiamo un thread per 
+eseguire ogni sottoproblema. Si dovrebbe avere un tempo di esecuzione 
+che è la metà di quello se si utilizzasse un solo processore. Ma se invece
+un sottoproblema ci impiega quattro volte di più che l'altro a risolversi, allora la maggiorparte del tempo lavorerà un solo processore. In questo caso, si avrà un guadagno di solo il 20%.
+
+La tecnica comune per avere a che fare con queste problematiche è dividere il 
+problema in tanti piccoli sottoproblemi - molti più sottoproblemi di quanti sono i processori. Questo significa che ogni processore avrà da risolvere diversi sottoproblemi. Ogni volta che un processore completerà un sottoproblema, gli verrà assegnato un altro sottoproblema su cui lavorare, 
+finchè tutti i sottoproblemi non saranno stati assegnati. 
+
+Questa è conosciuta come tecnica di **load balancing**: il carico di calcolo è
+bilanciato tra tutti i processori disponibili in modo da tenerli tutti 
+più occupati possibile.
 
 L'esempio [javanotes8.MultiprocessingDemo2](javanotes8.MultiprocessingDemo2) utilizza `ConcurrentLinkedQueue<Runnable> taskQueue` per suddividere il lavoro tra i diversi thread.
 
