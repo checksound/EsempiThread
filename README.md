@@ -27,7 +27,7 @@ Versione 4 - utilizza `Callable`, `Future` ed `ExecutorService`: [javanotes8.Thr
 In questo programma, ogni subtask conta i numeri primi in un sottorange di
 interi. I subtask sono rappresentati da oggetti di tipo `Callable<Integer>`, definiti in questa nested class:
 
-```
+```java
 /**
  * An object belonging to this class will count primes in a specified range
  * of integers.  The range is from min to max, inclusive, where min and max
