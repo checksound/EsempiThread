@@ -106,12 +106,8 @@ L'esempio [javanotes8.MultiprocessingDemo2](javanotes8.MultiprocessingDemo2) uti
 
 L'esempio [javanotes8.MultiprocessingDemo3](javanotes8.MultiprocessingDemo3) utilizza `LinkedBlockingQueue<Runnable> taskQueue` per suddividere il lavoro tra i diversi thread; il numero dei thread utilizzati dall'applicazione è stabilito in base al numero dei processori.
 
-L'esempio [javanotes8.MultiprocessingDemo4](javanotes8.MultiprocessingDemo4) utilizza invece `ExecutorService executor` del package `java.util.concurrent`; per istanziare l'executor service:
-
-```
-	int processors = Runtime.getRuntime().availableProcessors();
-	executor = Executors.newFixedThreadPool(processors);
-```
+L'esempio [javanotes8.MultiprocessingDemo4](javanotes8.MultiprocessingDemo4) è 
+una semplice variazione di `javanotes8.MultiprocessingDemo3` che utilizza invece `ExecutorService` invece di usare i thread e la blocking queue direttamente. 
 
 
 
