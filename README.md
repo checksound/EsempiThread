@@ -142,9 +142,9 @@ for each pixel (Px, Py) on the screen do
 
 ```
 
-Esempio [javanotes8.BackgroundComputationDemo](javanotes8.BackgroundComputationDemo) per visualizzazione con unico thread in background.
+Esempio [javanotes8.BackgroundComputationDemo](./src/javanotes8/BackgroundComputationDemo.java) per visualizzazione con unico thread in background.
 
-[javanotes8.MultiprocessingDemo1](javanotes8.MultiprocessingDemo1) utilizza più thread, potendo selezionare il numero da 1 a 8. Il programma divide il compito 
+[javanotes8.MultiprocessingDemo1](./src/javanotes8/MultiprocessingDemo1.java) utilizza più thread, potendo selezionare il numero da 1 a 8. Il programma divide il compito 
 (task) di disegnare un'immagine in tanti sotto task e assegna ogni sottotask a 
 un thred.
 
@@ -173,11 +173,11 @@ Questa è conosciuta come tecnica di **load balancing**: il carico di calcolo è
 bilanciato tra tutti i processori disponibili in modo da tenerli tutti 
 più occupati possibile.
 
-L'esempio [javanotes8.MultiprocessingDemo2](javanotes8.MultiprocessingDemo2) utilizza `ConcurrentLinkedQueue<Runnable> taskQueue` per suddividere il lavoro tra i diversi thread.
+L'esempio [javanotes8.MultiprocessingDemo2](./src/javanotes8/MultiprocessingDemo2.java) utilizza `ConcurrentLinkedQueue<Runnable> taskQueue` per suddividere il lavoro tra i diversi thread.
 
-L'esempio [javanotes8.MultiprocessingDemo3](javanotes8.MultiprocessingDemo3) utilizza `LinkedBlockingQueue<Runnable> taskQueue` per suddividere il lavoro tra i diversi thread; il numero dei thread utilizzati dall'applicazione è stabilito in base al numero dei processori.
+L'esempio [javanotes8.MultiprocessingDemo3](./src/javanotes8/MultiprocessingDemo3.java) utilizza `LinkedBlockingQueue<Runnable> taskQueue` per suddividere il lavoro tra i diversi thread; il numero dei thread utilizzati dall'applicazione è stabilito in base al numero dei processori.
 
-L'esempio [javanotes8.MultiprocessingDemo4](javanotes8.MultiprocessingDemo4) è 
+L'esempio [javanotes8.MultiprocessingDemo4](./src/javanotes8/MultiprocessingDemo4.java) è 
 una semplice variazione di `javanotes8.MultiprocessingDemo3` che utilizza invece `ExecutorService` invece di usare i thread e la blocking queue direttamente. 
 
 
