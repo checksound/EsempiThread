@@ -178,7 +178,7 @@ L'esempio [javanotes8.MultiprocessingDemo2](./src/javanotes8/MultiprocessingDemo
 L'esempio [javanotes8.MultiprocessingDemo3](./src/javanotes8/MultiprocessingDemo3.java) utilizza `LinkedBlockingQueue<Runnable> taskQueue` per suddividere il lavoro tra i diversi thread; il numero dei thread utilizzati dall'applicazione è stabilito in base al numero dei processori.
 
 L'esempio [javanotes8.MultiprocessingDemo4](./src/javanotes8/MultiprocessingDemo4.java) è 
-una semplice variazione di `javanotes8.MultiprocessingDemo3` che utilizza invece `ExecutorService` invece di usare i thread e la blocking queue direttamente. 
+una semplice variazione di `javanotes8.MultiprocessingDemo3` che utilizza `ExecutorService` invece di usare i thread e la blocking queue direttamente. 
 
 
 
