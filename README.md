@@ -110,11 +110,15 @@ Nel package [synch](./src/synch) c'è la versione che utilizza
 
 Nel package [synch2](./src/synch2) c'è la versione che utilizza `synchronized`, `wait` e `notify`.
 
-## ESEMPI JAVAXF
+## ESEMPI JavaFX
 
 Argomento per JVM:  
 
 `--module-path "C:\dev\openjfx-11.0.2\lib" --add-modules javafx.controls,javafx.fxml`
+
+Oppure:
+
+`--module-path "C:\dev\openjfx-11.0.2\lib"  --add-modules=ALL-MODULE-PATH`
 
 ## ESEMPI UTILIZZO DEI THREAD 
 
